@@ -1,0 +1,8 @@
+dnsmasq:
+    image: scavin/dnsmasq
+    ports:
+        - "53:53/udp"
+    volumes:
+        - ./dnsmasq.conf:/etc/dnsmasq.conf
+        - ./dnsmasq.d:/etc/dnsmasq.d
+    restart: always
